@@ -1,0 +1,41 @@
+# fly.toml file generated for proto-hackers-grossvogel on 2023-03-12T14:38:00-05:00
+
+app = "proto-hackers-grossvogel"
+kill_signal = "SIGTERM"
+kill_timeout = 5
+processes = []
+
+[env]
+  PORT = "10000"
+  SERVER_NAME = "EchoServer"
+
+[experimental]
+  auto_rollback = true
+
+[[services]]
+  internal_port = 10000
+  protocol = "tcp"
+  script_checks = []
+
+  [[services.ports]]
+    port = 10000
+    handlers = []
+
+  [services.concurrency]
+    hard_limit = 150
+    soft_limit = 100 
+    type = "connections"
+
+[[services]]
+  internal_port = 10001
+  protocol = "tcp"
+  script_checks = []
+
+  [[services.ports]]
+    port = 10001
+    handlers = []
+
+  [services.concurrency]
+    hard_limit = 150
+    soft_limit = 100 
+    type = "connections"
