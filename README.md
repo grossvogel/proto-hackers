@@ -29,3 +29,10 @@ Task3 ->> Client: reply
 deactivate Task3
 
 ```
+
+## Interesting things in each problem
+- Problem 0:
+  - process architecture
+  - closing one side of the duplex socket
+- Problem 1: line mode, but you still have to deal with multi-packet lines
+- Problem 2: fixed byte length recv, binary pattern matching
