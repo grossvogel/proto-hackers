@@ -39,3 +39,17 @@ processes = []
     hard_limit = 150
     soft_limit = 100 
     type = "connections"
+
+[[services]]
+  internal_port = 10002
+  protocol = "tcp"
+  script_checks = []
+
+  [[services.ports]]
+    port = 10002
+    handlers = []
+
+  [services.concurrency]
+    hard_limit = 150
+    soft_limit = 100 
+    type = "connections"
